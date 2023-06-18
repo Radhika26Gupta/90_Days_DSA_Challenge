@@ -1,0 +1,26 @@
+#include<iostream>
+#include<vector>
+using namespace std;
+void reverse(vector<int>&v,int s,int e)
+{
+	while(s<=e)
+	{
+		swap(v[s],v[e]);
+		s++;
+		e--;
+	}
+}
+int main()
+{
+	vector<int>v;
+    v.push_back(5);
+    v.push_back(3);
+    v.push_back(4);
+    v.push_back(2);
+    v.push_back(1);
+    reverse(v,0,3);
+    for(int i=0;i<v.size();i++)
+	{
+		cout<<v[i]<<" ";
+	}
+}
